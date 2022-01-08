@@ -1,0 +1,16 @@
+---
+label: Section > Featured Post
+hide_body: false
+fields:
+- name: post
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: pages
+      section: blog
+      file: 
+      path: 
+  label: post

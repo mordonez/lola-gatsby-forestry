@@ -1,0 +1,43 @@
+---
+label: Blog post
+hide_body: false
+fields:
+- name: templatekey
+  type: text
+  config:
+    required: false
+  hidden: true
+  label: templatekey
+  default: blog-post
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: date
+  type: datetime
+  label: Publish Date
+  description: ''
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now
+- name: description
+  type: text
+  config:
+    required: false
+  label: Description
+- name: featuredpost
+  type: boolean
+  label: Featured Post
+- name: featuredimage
+  type: file
+  config:
+    maxSize: 64
+  label: Featured Image
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags

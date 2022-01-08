@@ -1,0 +1,54 @@
+---
+label: Page
+hide_body: false
+fields:
+- name: templatekey
+  type: text
+  config:
+    required: false
+  label: templatekey
+  default: block-page
+  hidden: true
+- name: title
+  type: text
+  config:
+    required: false
+  label: title
+- name: showtitle
+  type: boolean
+  label: showtitle
+- name: header
+  type: blocks
+  label: header
+  template_types:
+  - section-page-heading
+  - section-image-and-text
+  - section-columns
+  - section-full-image
+  - section-featured-post
+  - section-contact-form
+  config:
+    min: 
+    max: 
+- name: footer
+  type: blocks
+  template_types:
+  - section-page-heading
+  - section-image-and-text
+  - section-columns
+  - section-full-image
+  - section-featured-post
+  - section-contact-form
+  config:
+    min: 
+    max: 
+  label: footer
+- name: path
+  type: text
+  config:
+    required: false
+  label: path
+pages:
+- src/pages/about.md
+- src/pages/contact/index.md
+- src/pages/index.md

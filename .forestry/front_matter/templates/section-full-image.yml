@@ -1,0 +1,33 @@
+---
+label: Section > Full Image
+hide_body: true
+fields:
+- name: image
+  type: file
+  config:
+    maxSize: 4
+  label: Image
+- name: height
+  type: number
+  label: Height
+  description: ''
+  default: 400
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+- name: heading
+  type: text
+  config:
+    required: false
+  label: Heading
+- name: subheading
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Subheading

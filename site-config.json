@@ -1,0 +1,11 @@
+{
+  "title": "Gatsby Starter site ",
+  "titleTemplate": "%s | Gatsby starter",
+  "description": "An example business website that is built with Gatsby, and Netlify CMS. It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.",
+  "theme": {
+    "colorsPrimary": "#433ec6",
+    "colorsLight": "#e4ebf2",
+    "colorsDark": "#5f6266",
+    "colorsLink": "#2fa4e7"
+  }
+}

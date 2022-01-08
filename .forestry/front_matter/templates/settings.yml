@@ -1,0 +1,54 @@
+---
+label: Settings
+hide_body: true
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: title
+- name: titleTemplate
+  type: text
+  config:
+    required: false
+  label: titleTemplate
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: description
+- name: theme
+  type: field_group
+  config: {}
+  fields:
+  - name: colorsPrimary
+    type: color
+    label: Primary
+    config:
+      required: false
+      color_format: Hex
+  - name: colorsLight
+    type: color
+    label: Light
+    config:
+      required: false
+      color_format: Hex
+  - name: colorsDark
+    type: color
+    label: Dark
+    config:
+      required: false
+      color_format: Hex
+  - name: colorsLink
+    type: color
+    label: Link
+    config:
+      required: false
+      color_format: Hex
+  label: theme
+pages:
+- site-config.json

@@ -1,0 +1,9 @@
+---
+label: Section > Contact Form
+hide_body: true
+fields:
+- name: thanks
+  type: text
+  config:
+    required: false
+  label: thanks
