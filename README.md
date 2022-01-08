@@ -12,7 +12,7 @@
 
 ## About
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/314f6fb1-b4a6-484a-ad3d-c26663a63bca/deploy-status)](https://app.netlify.com/sites/lola-gatsby-forestry/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6a9442e9-f132-4c0e-bfe5-d9aea779baed/deploy-status)](https://app.netlify.com/sites/lola-gatsby-forestry/deploys)
 
 Lola is a starter to get you going using [Gatsby v4](https://www.gatsbyjs.org/) with [Forestry](https://forestry.io/). Check out the demo [here](https://lola-gatsby-forestry.netlify.app/) (_port from [gatsby-starter-netlify-cms](https://github.com/netlify-templates/gatsby-starter-netlify-cms)_)
 
