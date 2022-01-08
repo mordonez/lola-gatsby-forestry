@@ -32,10 +32,6 @@ Lola is a starter to get you going using [Gatsby v4](https://www.gatsbyjs.org/) 
     <img alt="Import this project into Forestry" src="https://assets.forestry.io/import-to-forestryK.svg" />
 </a>
 
-#### *Deploy to Netlify*
-
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/mordonez/lola-gatsby-forestry&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
-
 #### *Using the Gatsby CLI*
 In your terminal, navigate to where you would like this blog to live, then run
 ```bash
