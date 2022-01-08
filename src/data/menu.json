@@ -5,6 +5,10 @@
       "url": "/blog/"
     },
     {
+      "title": "Sample Page",
+      "url": "/content-page/"
+    },
+    {
       "title": "About",
       "url": "/about/"
     },
