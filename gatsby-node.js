@@ -104,6 +104,9 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         header: [Sections]
         footer: [Sections]
       }`,
+      `type MarkdownRemarkFrontmatterMeta {
+        image: File @fileByRelativePath
+      }`,
   ]
   createTypes(typeDefs)
 }

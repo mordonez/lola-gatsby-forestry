@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Helmet } from "react-helmet";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
+import SEO from "@components/seo";
 
 const TagRoute = (props) => {
 
@@ -23,8 +23,11 @@ const TagRoute = (props) => {
 
   return (
     <Layout>
+      <SEO
+        title={tag}
+        description=""
+      />
       <section className="section has-background-light">
-        <Helmet title={`${tag} | ${title}`} />
         <div className="container">
           <div className="content columns is-centered">
             <div

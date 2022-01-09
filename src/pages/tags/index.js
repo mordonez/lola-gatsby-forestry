@@ -1,20 +1,20 @@
 import * as React from "react";
 import { kebabCase } from "lodash";
-import { Helmet } from "react-helmet";
 import { Link, graphql } from "gatsby";
 import Layout from "../../components/Layout";
+import SEO from "@components/seo";
 
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
-    site: {
-      siteMetadata: { title },
-    },
   },
 }) => (
   <Layout>
+    <SEO
+        title="Tags"
+        description=""
+      />
     <section className="section has-background-light">
-      <Helmet title={`Tags | ${title}`} />
       <div className="container">
         <div className="content columns is-centered">
           <div

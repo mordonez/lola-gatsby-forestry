@@ -1,77 +1,38 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-
-import Layout from "../components/Layout";
+import { getSrc } from "gatsby-plugin-image"
+import Layout from "@components/Layout";
 import Sections from "@components/Sections";
-import { Helmet } from "react-helmet";
-import Content, { HTMLContent } from "../components/Content";
+import SEO from "@components/seo";
+import Content, { HTMLContent } from "@components/Content";
 
-// eslint-disable-next-line
-const BlockPageTemplate = ({
-  title,
-  showtitle,
-  header,
-  footer,
-  helmet,
-  content,
-  contentComponent
-}) => {
-  const PageContent = contentComponent || Content;
+const BlockPage = ({ data }) => {
+  const { markdownRemark: page } = data;
+  const PageContent = HTMLContent || page.html;
+
   return (
-    <div>
-      {helmet || ""}
-      <Sections sections={header} />
-      {(content || showtitle) && <section className="section section--gradient">
+    <Layout>
+      <SEO
+        title={page.frontmatter.meta?.title || page.frontmatter.title}
+        description={page.frontmatter.meta?.description || page.excerpt}
+        image={getSrc(page.frontmatter.meta?.image)}
+      />
+      <Sections sections={page.frontmatter.header} />
+      {(page.html || page.frontmatter.showtitle) && <section className="section section--gradient">
         <div className="container">
           <div className="columns">
             <div className="column is-10 is-offset-1">
-              {showtitle && <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
+              {page.frontmatter.showtitle && <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+                {page.frontmatter.title}
               </h2>
               }
-              <PageContent className="content" content={content} />
+              <PageContent className="content" content={page.html} />
             </div>
           </div>
         </div>
       </section>}
-      <Sections sections={footer} />
-    </div>
-  );
-};
-
-BlockPageTemplate.propTypes = {
-  title: PropTypes.string,
-  showtitle: PropTypes.bool,
-  header: PropTypes.array,
-  footer: PropTypes.array,
-  helmet: PropTypes.object,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
-};
-
-const BlockPage = ({ data }) => {
-  const { markdownRemark: page } = data;
-  return (
-    <Layout>
-      <BlockPageTemplate
-        title={page.frontmatter.title}
-        header={page.frontmatter.header}
-        footer={page.frontmatter.footer}
-        showtitle={page.frontmatter.showtitle}
-        helmet={
-          <Helmet>
-            <title>{`${page.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${page.frontmatter.description}`}
-            />
-          </Helmet>
-        }
-        contentComponent={HTMLContent}
-        title={page.frontmatter.title}
-        content={page.html}
-      />
+      <Sections sections={page.frontmatter.footer} />
     </Layout>
   );
 };
@@ -153,6 +114,7 @@ export const pageQuery = graphql`
         }
         title
         showtitle
+        ...MetaInfo
       }
     }
   }

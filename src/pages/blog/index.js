@@ -2,13 +2,16 @@ import * as React from "react";
 
 import Layout from "@components/Layout";
 import BlogPosts from "@templates/blog-posts";
-import { Helmet } from "react-helmet";
+import SEO from "@components/seo";
 
  const BlockPage = () => {
 
     return (
       <Layout>
-        <Helmet title="Blog" description="" />
+        <SEO
+        title="Blogs"
+        description=""
+      />
         <section className="section has-background-light">
           <div className="container">
             <div className="content">

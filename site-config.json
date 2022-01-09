@@ -2,6 +2,7 @@
   "title": "Lola",
   "titleTemplate": "%s | Lola",
   "description": "Lola is a starter to get you going using Gatsby v4 with Forestry",
+  "twitterUsername": "@twitter",
   "theme": {
     "colorsPrimary": "#433ec6",
     "colorsLight": "#e4ebf2",

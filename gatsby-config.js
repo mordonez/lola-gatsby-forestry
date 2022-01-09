@@ -10,6 +10,8 @@ module.exports = {
     title: config.title || "Lola",
     titleTemplate: config.titleTemplate || "%s | Lola",
     description: config.description || "An example website that is built with Gatsby",
+    siteUrl: process.env.URL || "http://localhost:8000",
+    twitterUsername: config.twitterUsername,
   },
   plugins: [
     {

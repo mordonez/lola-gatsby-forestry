@@ -1,6 +1,10 @@
 ---
 templatekey: block-page
 title: Home
+meta:
+  title: "Lola starter"
+  description: "Lola is a starter to get you going using Gatsby v4 with Forestry"
+  image: ""
 header:
 - template: section-image-and-text
   position: right
