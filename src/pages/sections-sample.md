@@ -28,6 +28,10 @@ header:
   image: "/img/197-2560x1440.jpg"
   heading: Full Image
   subheading: Become alone phase earnestly that what's hungrier was frequency
+- template: section-page-heading
+  type: pageheading
+  heading: Columns (3 columns per row)
+  subheading: ''
 - template: section-columns
   number: '3'
   columns:
@@ -62,7 +66,29 @@ header:
 
       I would the only these to we've neighbours the derided are my as once checkin immense step agency; The pass frequencies proceeded you phase. Torn by this sleep. But the on be know that from of sentences rational this in saw that is of text it I is you of.
   box: false
+- template: section-page-heading
+  type: pageheading
+  heading: Columns (2 columns per rows with boxes)
+  subheading: ''
+- template: section-columns
+  box: true
+  number: '2'
+  columns:
+  - image: "/img/829-2560x1440.jpg"
+    content: ''
+  - image: "/img/562-2560x1440.jpg"
+    content: ''
+  - image: "/img/860-2560x1440.jpg"
+    content: ''
+  - image: "/img/565-2560x1440.jpg"
+    content: ''
+- template: section-page-heading
+  type: pageheading
+  heading: Contact Form
+  subheading: ''
+- template: section-contact-form
+  thanks: "/contact/thanks/"
 footer: []
-path: ''
+path: "/sections-sample/"
 
 ---
