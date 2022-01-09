@@ -22,7 +22,6 @@ sections:
 - type: document
   path: src/data/menu.json
   label: Menu
-  match: "**/*"
 - type: document
   path: site-config.json
   label: Settings
