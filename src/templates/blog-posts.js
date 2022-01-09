@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 
-const BlogRollTemplate = (props) => {
+const BlogPostsTemplate = (props) => {
 
   const { edges: posts } = props.data.allMarkdownRemark;
 
@@ -54,7 +54,7 @@ const BlogRollTemplate = (props) => {
   </>)
 }
 
-BlogRoll.propTypes = {
+BlogPosts.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -63,11 +63,11 @@ BlogRoll.propTypes = {
 }
 
 
-export default function BlogRoll() {
+export default function BlogPosts() {
   return (
     <StaticQuery
       query={graphql`
-        query BlogRollQuery {
+        query BlogPosts {
           allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
             filter: { frontmatter: { templatekey: { eq: "blog-post" } } }
@@ -99,7 +99,7 @@ export default function BlogRoll() {
           }
         }
       `}
-      render={(data, count) => <BlogRollTemplate data={data} count={count} />}
+      render={(data, count) => <BlogPostsTemplate data={data} count={count} />}
     />
   );
 }

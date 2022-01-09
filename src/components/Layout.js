@@ -5,7 +5,7 @@ import Navbar from "@components/Navbar";
 import "./all.sass";
 import useSiteMetadata from "@hooks/useSiteMetadata";
 import { withPrefix } from "gatsby";
-const TemplateWrapper = ({ children }) => {
+const Layout = ({ children }) => {
   const { title, titleTemplate, description } = useSiteMetadata();
   return (
     <div>
@@ -59,4 +59,4 @@ const TemplateWrapper = ({ children }) => {
   );
 };
 
-export default TemplateWrapper;
+export default Layout;

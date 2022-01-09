@@ -1,0 +1,26 @@
+---
+label: Menu
+hide_body: false
+fields:
+- name: navigation
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: url
+    type: text
+    config:
+      required: false
+    label: URL
+    description: 'Example: <em>/blog/</em>'
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Menu
+  description: Header and footer menu
+pages:
+- src/data/menu.json

@@ -18,22 +18,22 @@ const Columns = ({ data }) => {
     return (
       <section className={`section ${data.box ? 'has-background-light' : ''}`}>
         <div className="container">
-            {
-              result.map((columns,index) => {
-                return (<div key={index} className={`columns ${data.box ? 'is-centered' : ''}`}>
-                  {columns.map((column, index) => {
-                    const converter = new showdown.Converter(),
-                      html = converter.makeHtml(column.content);
-                    return (<div key={index} className={`column ${data.box ? 'has-text-centered' : ''}`}>
-                      <div className={`${data.box ? 'box': ''}`}>
-                        <div className="mb-4"><PreviewCompatibleImage imageInfo={{ image: column.image, className: data.box ? 'mx-3' : ''}} /></div>
-                        <div className="content" dangerouslySetInnerHTML={{ __html: html }} />
-                      </div>
-                    </div>)
-                  })}
-                </div>)
-              })
-            }
+          {
+            result.map((columns, index) => {
+              return (<div key={index} className={`columns ${data.box ? 'is-centered' : ''}`}>
+                {columns.map((column, index) => {
+                  const converter = new showdown.Converter(),
+                    html = converter.makeHtml(column.content);
+                  return (<div key={index} className={`column ${data.box ? 'has-text-centered' : ''}`}>
+                    <div className={`${data.box ? 'box' : ''}`}>
+                      <div className="mb-4"><PreviewCompatibleImage imageInfo={{ image: column.image, className: data.box ? 'mx-3' : '' }} /></div>
+                      <div className="content" dangerouslySetInnerHTML={{ __html: html }} />
+                    </div>
+                  </div>)
+                })}
+              </div>)
+            })
+          }
         </div>
       </section>
     )

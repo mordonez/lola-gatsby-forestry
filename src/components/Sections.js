@@ -2,7 +2,6 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import PageHeading from "@components/Sections/PageHeading"
 import ImageAndText from "@components/Sections/ImageAndText";
-import Content from "@components/Sections/Content"
 import FullImage from "@components/Sections/FullImage";
 import FeaturedPost from "@components/Sections/FeaturedPost";
 import Columns from "@components/Sections/Columns";
@@ -13,7 +12,6 @@ const Sections = ({ sections }) => {
   const sectionsComponents = {
     'section-page-heading': PageHeading,
     'section-image-and-text': ImageAndText,
-    content: Content,
     'section-full-image': FullImage,
     featuredpost: FeaturedPost,
     'section-columns': Columns,

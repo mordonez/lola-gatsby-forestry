@@ -1,7 +1,6 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: "/static/admin"
 webhook_url: 
 sections:
 - type: directory
@@ -19,6 +18,11 @@ sections:
   match: "**/*"
   exclude: "{blog/**/*}"
   new_doc_ext: md
+  templates:
+  - blockpage
+- type: document
+  path: src/data/menu.json
+  label: Menu
 - type: document
   path: site-config.json
   label: Settings

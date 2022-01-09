@@ -6,12 +6,13 @@ fields:
   type: text
   config:
     required: false
-  label: title
+  label: Title
 - name: titleTemplate
   type: text
   config:
     required: false
-  label: titleTemplate
+  label: Title template
+  description: 'Example: %s | Site name'
 - name: description
   type: textarea
   default: ''
@@ -20,7 +21,7 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
-  label: description
+  label: Description
 - name: theme
   type: field_group
   config: {}
@@ -31,24 +32,28 @@ fields:
     config:
       required: false
       color_format: Hex
+    description: Primary color
   - name: colorsLight
     type: color
     label: Light
     config:
       required: false
       color_format: Hex
+    description: Light color
   - name: colorsDark
     type: color
     label: Dark
     config:
       required: false
       color_format: Hex
+    description: Dark color
   - name: colorsLink
     type: color
     label: Link
     config:
       required: false
       color_format: Hex
-  label: theme
+    description: Link color
+  label: Theme
 pages:
 - site-config.json

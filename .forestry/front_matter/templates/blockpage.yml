@@ -13,13 +13,14 @@ fields:
   type: text
   config:
     required: false
-  label: title
+  label: Title
 - name: showtitle
   type: boolean
-  label: showtitle
+  label: Showtitle
+  description: Show the title in main content
 - name: header
   type: blocks
-  label: header
+  label: Header
   template_types:
   - section-page-heading
   - section-image-and-text
@@ -30,6 +31,7 @@ fields:
   config:
     min: 
     max: 
+  description: Add sections above the main content
 - name: footer
   type: blocks
   template_types:
@@ -42,13 +44,16 @@ fields:
   config:
     min: 
     max: 
-  label: footer
+  label: Footer
+  description: Add sections below the main content
 - name: path
   type: text
   config:
     required: false
-  label: path
+  label: Path
+  description: 'Example: <em>/path-name/</em>'
 pages:
 - src/pages/about.md
 - src/pages/contact/index.md
 - src/pages/index.md
+- src/pages/sections-sample.md
