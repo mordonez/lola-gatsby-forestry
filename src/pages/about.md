@@ -10,6 +10,11 @@ header:
 path: "/about/"
 showtitle: false
 footer: []
+meta:
+  title: About us
+  description: Void make she'd. Firmament divide seed spirit also our fourth give
+    face divide without their, were midst
+  image: "/img/197-2560x1440.jpg"
 
 ---
 ## Fowl Evening Is Green Yielding Called Be Void
