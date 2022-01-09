@@ -19,6 +19,8 @@ sections:
   match: "**/*"
   exclude: "{blog/**/*}"
   new_doc_ext: md
+  templates:
+  - blockpage
 - type: document
   path: src/data/menu.json
   label: Menu
