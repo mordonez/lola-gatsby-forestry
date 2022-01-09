@@ -107,7 +107,6 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         columns: [Columns]
       }`,
     `type MarkdownRemarkFrontmatter {
-        post: MarkdownRemark @link(by: "frontmatter.id")
         header: [Sections]
         footer: [Sections]
       }`,

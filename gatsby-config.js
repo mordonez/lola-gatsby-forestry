@@ -7,9 +7,9 @@ require("dotenv").config({
 module.exports = {
   pathPrefix: process.env.PATH_PREFIX || "",
   siteMetadata: {
-    title: config.title || "Loling",
-    titleTemplate: config.titleTemplate || "%s | Loling",
-    description: config.description || "An example business website that is built with Gatsby",
+    title: config.title || "Lola",
+    titleTemplate: config.titleTemplate || "%s | Lola",
+    description: config.description || "An example website that is built with Gatsby",
   },
   plugins: [
     {

@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-forestry-cms",
-  "description": "Example Gatsby and Forestry CMS project",
+  "name": "lola-gatsby-forestry",
+  "description": "starter website using gatsby and forestry",
   "version": "1.0.0",
   "author": "Miguel Ordoñez",
   "dependencies": {
