@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import Layout from "@components/Layout";
-import BlogRoll from "@components/BlogRoll";
+import BlogPosts from "@templates/blog-posts";
 import { Helmet } from "react-helmet";
 
  const BlockPage = () => {
@@ -12,7 +12,7 @@ import { Helmet } from "react-helmet";
         <section className="section has-background-light">
           <div className="container">
             <div className="content">
-              <BlogRoll />
+              <BlogPosts />
             </div>
           </div>
         </section>
