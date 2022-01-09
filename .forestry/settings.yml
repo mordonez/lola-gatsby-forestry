@@ -4,10 +4,6 @@ auto_deploy: false
 admin_path: "/static/admin"
 webhook_url: 
 sections:
-- type: document
-  path: src/data/menu.json
-  label: Menu
-  match: "**/*"
 - type: directory
   path: src/pages/blog
   label: Blog
@@ -23,6 +19,10 @@ sections:
   match: "**/*"
   exclude: "{blog/**/*}"
   new_doc_ext: md
+- type: document
+  path: src/data/menu.json
+  label: Menu
+  match: "**/*"
 - type: document
   path: site-config.json
   label: Settings
