@@ -1,4 +1,23 @@
 ---
 label: Menu
 hide_body: false
-fields: []
+fields:
+- name: navigation
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: title
+  - name: url
+    type: text
+    config:
+      required: false
+    label: url
+    description: 'Example: <em>/blog/</em>'
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: navigation
