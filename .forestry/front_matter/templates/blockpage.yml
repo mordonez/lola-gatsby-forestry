@@ -56,3 +56,4 @@ pages:
 - src/pages/about.md
 - src/pages/contact/index.md
 - src/pages/index.md
+- src/pages/sections-sample.md
