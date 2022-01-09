@@ -9,17 +9,18 @@ fields:
     type: text
     config:
       required: false
-    label: title
+    label: Title
   - name: url
     type: text
     config:
       required: false
-    label: url
+    label: URL
     description: 'Example: <em>/blog/</em>'
   config:
     min: 
     max: 
     labelField: 
-  label: navigation
+  label: Menu
+  description: Header and footer menu
 pages:
 - src/data/menu.json
