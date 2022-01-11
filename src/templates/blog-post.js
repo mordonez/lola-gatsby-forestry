@@ -30,8 +30,8 @@ const BlogPost = ({ data }) => {
               {tags && tags.length ? (
                 <div style={{ marginTop: `4rem` }}>
                   <div className="tags">
-                    {tags.map((tag) => (
-                      <Link key={tag + `tag`} className="tag is-primary" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                    {tags.map((tag,key) => (
+                      <Link key={tag + `tag` + key} className="tag is-primary" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                     ))}
                   </div>
                 </div>

@@ -10,8 +10,8 @@ const BlogPostsTemplate = (props) => {
 
   return (<>
       {posts &&
-        posts.map(({ node: post }) => (
-          <div className="columns is-centered">
+        posts.map(({ node: post }, key) => (
+          <div key={key} className="columns is-centered">
             <div className="column is-8">
               <div className="post mt-6 box">
                 <div className="columns">
