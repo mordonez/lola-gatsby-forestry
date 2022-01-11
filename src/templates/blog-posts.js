@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 
 const BlogPostsTemplate = (props) => {
@@ -28,18 +28,11 @@ const BlogPostsTemplate = (props) => {
                 </div>
                 <div className="columns">
                   <div className="column is-8 is-offset-2 mb-4">
-                  <PreviewCompatibleImage
-                      imageInfo={{
-                        image: post.frontmatter.featuredimage,
-                        alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                        width:
-                          post.frontmatter.featuredimage.childImageSharp
-                            .gatsbyImageData.width,
-                        height:
-                          post.frontmatter.featuredimage.childImageSharp
-                            .gatsbyImageData.height,
-                        className:"mb-4"
-                      }}
+                    <GatsbyImage
+                      image={post.frontmatter.featuredimage.childImageSharp.gatsbyImageData}
+                      style={{borderRadius: "5px"}}
+                      alt={post.frontmatter.title}
+                      className="mb-4"
                     />
                     <p>{post.excerpt}</p>
                     <Link to={post.fields.slug}>

@@ -1,7 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import PreviewCompatibleImage from "@components/PreviewCompatibleImage";
 import { Link } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const FeaturedPost = ({ data }) => {
   if (data) {
@@ -18,17 +18,10 @@ const FeaturedPost = ({ data }) => {
           <header>
             {data.post?.frontmatter?.featuredimage && (
               <div className="featured-thumbnail">
-                <PreviewCompatibleImage
-                  imageInfo={{
-                    image: data.post.frontmatter.featuredimage,
-                    alt: `featured image thumbnail for post ${data.post.frontmatter.title}`,
-                    width:
-                      data.post.frontmatter.featuredimage.childImageSharp
-                        .gatsbyImageData.width,
-                    height:
-                      data.post.frontmatter.featuredimage.childImageSharp
-                        .gatsbyImageData.height,
-                  }}
+                <GatsbyImage
+                  image={data.post.frontmatter.featuredimage.childImageSharp.gatsbyImageData}
+                  style={{ borderRadius: "5px" }}
+                  alt={data.post.frontmatter.title}
                 />
               </div>
             )}

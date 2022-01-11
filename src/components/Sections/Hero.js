@@ -1,6 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import PreviewCompatibleImage from "@components/PreviewCompatibleImage";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const Hero = ({ data }) => (
   <section className="hero has-background-light">
@@ -22,14 +22,11 @@ const Hero = ({ data }) => (
       </div>
       <div className="column is-half">
         <figure className="image is is-covered">
-          <PreviewCompatibleImage
-            imageInfo={{
-              image: data.image,
-              alt: data.title,
-              width: data.image?.childImageSharp?.gatsbyImageData.width,
-              height: data.image?.childImageSharp?.gatsbyImageData.height,
-            }}
-          />
+            <GatsbyImage
+              image={data.image.childImageSharp.gatsbyImageData}
+              style={{ borderRadius: "5px" }}
+              alt={data.title}
+            />
         </figure>
       </div>
       </div>

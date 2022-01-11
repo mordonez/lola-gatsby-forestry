@@ -1,7 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import PreviewCompatibleImage from "@components/PreviewCompatibleImage";
 import Buttons from "@components/Buttons/Buttons";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const ImageAndText = ({ data }) => {
   const StyleComponents = {
@@ -31,13 +31,10 @@ const TextComponent = ({ data }) => {
 }
 const ImageComponent = ({ data }) => {
   return (<figure className="image is is-covered">
-    <PreviewCompatibleImage
-      imageInfo={{
-        image: data.image,
-        alt: data.heading,
-        width: data.image?.childImageSharp?.gatsbyImageData.width,
-        height: data.image?.childImageSharp?.gatsbyImageData.height,
-      }}
+    <GatsbyImage
+      image={data.image.childImageSharp.gatsbyImageData}
+      style={{ borderRadius: "5px" }}
+      alt={data.heading}
     />
   </figure>)
 }
