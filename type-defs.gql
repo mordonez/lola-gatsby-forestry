@@ -1,0 +1,25 @@
+type Buttons {
+  label: String
+  url: String
+  style: String
+}
+
+type Columns {
+  image: File @fileByRelativePath
+  content: String
+}
+type Sections {
+  subheading: String
+  buttons: [Buttons]
+  post: MarkdownRemark @link(by: "frontmatter.id")
+  columns: [Columns]
+}
+
+type MarkdownRemarkFrontmatter {
+  header: [Sections]
+  footer: [Sections]
+}
+
+type MarkdownRemarkFrontmatterMeta {
+  image: File @fileByRelativePath
+}

@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const fs = require(`fs`)
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
@@ -83,30 +84,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createSchemaCustomization = ({ actions, schema }) => {
   const { createTypes } = actions
 
-  const typeDefs = [
-    `type Buttons {
-      label: String
-      url: String
-      style: String
-    }`,
-    `type Columns {
-      image: File @fileByRelativePath
-      content: String
-    }`,
+  const typeDefs = fs.readFileSync(`type-defs.gql`, {
+    encoding: `utf-8`,
+  })
 
-    `type Sections {
-        subheading: String
-        buttons: [Buttons]
-        post: MarkdownRemark @link(by: "frontmatter.id")
-        columns: [Columns]
-      }`,
-    `type MarkdownRemarkFrontmatter {
-        header: [Sections]
-        footer: [Sections]
-      }`,
-      `type MarkdownRemarkFrontmatterMeta {
-        image: File @fileByRelativePath
-      }`,
-  ]
   createTypes(typeDefs)
 }
