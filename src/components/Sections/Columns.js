@@ -26,14 +26,14 @@ const Columns = ({ data }) => {
                     html = converter.makeHtml(column.content);
                   return (<div key={index} className={`column ${data.box ? 'has-text-centered' : ''}`}>
                     <div className={`${data.box ? 'box' : ''}`}>
-                      <div className="mb-4">
+                      {column.image && <div className="mb-4">
                         <GatsbyImage
-                          image={column.image?.childImageSharp.gatsbyImageData}
+                          image={column.image.childImageSharp.gatsbyImageData}
                           style={{ borderRadius: "5px" }}
                           alt=""
                           className={data.box ? 'mx-3' : ''}
                         />
-                        </div>
+                      </div>}
                       <div className="content" dangerouslySetInnerHTML={{ __html: html }} />
                     </div>
                   </div>)
