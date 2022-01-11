@@ -11,14 +11,12 @@ const FullImage = ({ data }) => {
 } ;
 
 FullImage.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
+  data: PropTypes.shape({
       heading: PropTypes.string,
       subheading: PropTypes.string,
       image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
       height: PropTypes.number
     })
-  ),
 };
 
 export default FullImage;

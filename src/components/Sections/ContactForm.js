@@ -9,11 +9,9 @@ const ContactForm = ({ data }) => {
 };
 
 ContactForm.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
+  data: PropTypes.shape({
       thanks: PropTypes.string,
     })
-  ),
 };
 
 export default ContactForm;
