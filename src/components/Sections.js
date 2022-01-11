@@ -21,9 +21,9 @@ const Sections = ({ sections }) => {
     const sectionsContent = sections.map((section, key) => {
       const Section = sectionsComponents[section.template]
     if (Section) {
-      return <Section key="`${section.template}-${key}`" data={section} />
+      return <Section key={`${section.template}-${key}`} data={section} />
     }
-    return <div key="`${section}-${key}`">{section.template}</div>
+    return <div key={`${section}-${key}`}>{section.template}</div>
   })
   return (
     <>{sectionsContent}</>

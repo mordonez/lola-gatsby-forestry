@@ -34,13 +34,13 @@ const Footer = () => {
 
             <div style={{ maxWidth: "100vw" }} className="columns">
               {
-                result.map((columns) => {
-                  return (<div className="column is-4">
+                result.map((columns, key) => {
+                  return (<div key={key} className="column is-4">
                     <section className="menu">
                       <ul className="menu-list">
                         {columns.map((link, id) => (
-                          <li className="navbar-item" >
-                            <Link className="navbar-item" key={id} to={link.url}>{link.title}</Link>
+                          <li key={id} className="navbar-item" >
+                            <Link className="navbar-item" to={link.url}>{link.title}</Link>
                           </li>
                         ))}
                       </ul>

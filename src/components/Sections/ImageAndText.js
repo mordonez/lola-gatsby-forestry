@@ -63,15 +63,13 @@ const ImageLeft = ({ data }) => {
 }
 
 ImageAndText.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
+  data: PropTypes.shape({
       position: PropTypes.string,
       heading: PropTypes.string,
       content: PropTypes.string,
       image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
       buttons: PropTypes.array,
     })
-  ),
 };
 
 export default ImageAndText;

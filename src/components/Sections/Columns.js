@@ -43,13 +43,11 @@ const Columns = ({ data }) => {
 };
 
 Columns.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      number: PropTypes.string.isRequired,
-      columns: PropTypes.array,
-      box: PropTypes.bool
-    })
-  ),
+  data: PropTypes.shape({
+    number: PropTypes.string.isRequired,
+    columns: PropTypes.array,
+    box: PropTypes.bool
+  })
 };
 
 export default Columns;
